@@ -1,0 +1,46 @@
+{
+  "name": "erp-crm-backend",
+  "version": "1.0.0",
+  "description": "Backend API server for Wholesale/Distribution Mini ERP + CRM Operations Portal",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "db:setup": "ts-node scripts/setup-db.ts",
+    "db:seed": "ts-node scripts/seed-users.ts",
+    "test:auth": "ts-node scripts/test-auth-api.ts",
+    "test:customer": "ts-node scripts/test-customer-api.ts",
+    "test:product": "ts-node scripts/test-product-api.ts",
+    "test:challan": "ts-node scripts/test-challan-api.ts",
+    "test:e2e": "ts-node scripts/test-e2e-integration.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "erp",
+    "crm",
+    "express",
+    "typescript",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
